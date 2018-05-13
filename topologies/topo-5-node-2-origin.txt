@@ -1,0 +1,39 @@
+# topo-5-node.txt
+# default topo of iCDN project
+#
+# we have 5 nodes in the overlay (keywork "node")
+# we have 2 origins in the network (keyword "origin")
+router
+
+# node  comment     yPos    xPos
+node0   NA        5       3
+node1   NA        7       6
+node2   NA        3       5
+node3   NA        3       7
+node4   NA        5       9
+origin0 NA        7       9
+origin1 NA        3       9
+
+link
+
+# srcNode   dstNode     bandwidth   metric  delay   queue
+node0       node1       10Mbps      1       10ms     20
+node0       node2       10Mbps      1       10ms     20
+node0       node3       10Mbps      1       10ms     20
+node0       node4       10Mbps      1       10ms     20
+node1       node2       10Mbps      1       10ms     20
+node1       node3       10Mbps      1       10ms     20
+node1       node4       10Mbps      1       10ms     20
+node2       node3       10Mbps      1       10ms     20
+node2       node4       10Mbps      1       10ms     20
+node3       node4       10Mbps      1       10ms     20
+origin0     node0       10Mbps      1       10ms     20 
+origin0     node1       10Mbps      1       10ms     20 
+origin0     node2       10Mbps      1       10ms     20 
+origin0     node3       10Mbps      1       10ms     20 
+origin0     node4       10Mbps      1       10ms     20 
+origin1     node0       10Mbps      1       10ms     20 
+origin1     node1       10Mbps      1       10ms     20 
+origin1     node2       10Mbps      1       10ms     20 
+origin1     node3       10Mbps      1       10ms     20 
+origin1     node4       10Mbps      1       10ms     20 
