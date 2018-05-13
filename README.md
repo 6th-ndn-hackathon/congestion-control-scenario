@@ -1,6 +1,8 @@
 Prerequisites
 =============
 
+** Congestion Control Scenario **
+
 Custom version of NS-3 (tagged as `ns-3.23-dev-ndnSIM-2.1`) and ndnSIM 2.1 (tagged as `ndnSIM-2.1`)
 needs to be installed.
 
@@ -14,14 +16,14 @@ The code should also work with the latest version of ndnSIM, but it is not guara
     git clone https://github.com/named-data-ndnSIM/ndnSIM ns-3/src/ndnSIM
     (cd ns-3/src/ndnSIM; git checkout ndnSIM-2.1)
 
-    git clone --recursive https://github.com/named-data-ndnSIM/scenario-ndn-ping
+    git clone --recursive https://github.com/congestion-control-scenario.git
 
     cd ns-3
     ./waf configure -d optimized
     ./waf
     sudo ./waf install
 
-    cd ../my-simulations
+    cd ../congestion-control-scenario
 
 After which you can proceed to compile and run the code
 
@@ -45,13 +47,3 @@ To configure in debug mode with all logging enabled
 
 If you have installed NS-3 in a non-standard location, you may need to set up ``PKG_CONFIG_PATH``
 variable.
-
-Running
-=======
-
-You can run the ping scenario by typing
-
-    ./waf --run ping-simple
-
-    # or
-    # ./build/ping-simple
